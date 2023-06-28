@@ -20,17 +20,17 @@ function App() {
   const numOfCompletedTodos = todos.filter((todo) => todo.completed).length;
 
   return (
-    <>
-      <h1 className="text-center text-3xl font-bold">
+    <main className="bg-[#372554]">
+      <h1 className=" border-gray-900 bg-[#372554] pb-4 pt-4 text-center text-3xl font-bold  text-[#7c9eb2]">
         {numOfCompletedTodos} of {todos.length} To Dos Completed
       </h1>
 
-      <ul className="flex flex-col">
+      <ul className=" mx-[300px] bg-[#52528c] text-2xl">
         {todos.map((todo) => (
           <Todo key={todo.id} todo={todo} onChange={handleChange} />
         ))}
       </ul>
-    </>
+    </main>
   );
 }
 
