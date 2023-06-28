@@ -9,7 +9,7 @@ function App() {
   const handleChange = (event) => {
     setTodos((prev) => {
       return prev.map((todo) => {
-        if (todo.id.toString() === Number(event.target.id)) {
+        if (todo.id.toString() === event.target.id) {
           return { ...todo, completed: event.target.checked };
         }
         return todo;
