@@ -6,9 +6,7 @@ export default function useFetch(url) {
   React.useEffect(() => {
     fetch(url)
       .then((resp) => resp.json())
-      .then((data) => {
-        setData(data);
-      });
+      .then((data) => setData(data));
   }, [url]);
 
   return [data, setData];
